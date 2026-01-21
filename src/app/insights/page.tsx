@@ -7,7 +7,7 @@ import { Badge } from "@/components/ui/badge";
 export const metadata: Metadata = {
   title: "Insights | Finance News & Guides",
   description:
-    "Expert insights on commercial finance, property investment, and business funding. Guides, news, and market updates from Cascade Finance.",
+    "Expert insights on commercial finance, property investment, and business funding. Guides, news, and market updates from Aegis Finance.",
 };
 
 // Placeholder posts - will be replaced with Sanity data

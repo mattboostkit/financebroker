@@ -9,7 +9,7 @@ const testimonials = [
     name: "James Morrison",
     role: "Property Developer",
     content:
-      "Cascade Finance secured our development funding in record time. Their expertise and lender relationships are second to none. Highly recommended for any property investor.",
+      "Aegis Finance secured our development funding in record time. Their expertise and lender relationships are second to none. Highly recommended for any property investor.",
     rating: 5,
   },
   {

@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: process.env.NEXT_PUBLIC_SITE_URL || 'https://cascadefinance.co.uk',
+  siteUrl: process.env.NEXT_PUBLIC_SITE_URL || 'https://aegisfinance.co.uk',
   generateRobotsTxt: true,
   generateIndexSitemap: false,
   exclude: ['/api/*'],

@@ -53,8 +53,8 @@ export default function ComplaintsPage() {
 
             <h3>By Email</h3>
             <p>
-              <a href={`mailto:complaints@cascadefinance.co.uk`}>
-                complaints@cascadefinance.co.uk
+              <a href={`mailto:complaints@aegisfinance.co.uk`}>
+                complaints@aegisfinance.co.uk
               </a>
             </p>
 

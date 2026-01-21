@@ -72,7 +72,7 @@ export async function POST(request: NextRequest) {
     // Send notification email to broker
     if (resend && process.env.NOTIFICATION_EMAIL) {
       const emailResult = await resend.emails.send({
-        from: "Cascade Finance <notifications@cascadefinance.co.uk>",
+        from: "Aegis Finance <notifications@aegisfinance.co.uk>",
         to: [process.env.NOTIFICATION_EMAIL],
         subject: `New Lead: ${financeType} enquiry from ${name}`,
         html: `

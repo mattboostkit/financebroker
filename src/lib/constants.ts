@@ -1,9 +1,9 @@
 // Company Information
 export const COMPANY_INFO = {
-  name: "Cascade Finance", // Placeholder - to be updated
+  name: "Aegis Finance", // Placeholder - to be updated
   tagline: "Commercial Finance Specialists",
   phone: "01234 567890", // Placeholder
-  email: "enquiries@cascadefinance.co.uk", // Placeholder
+  email: "enquiries@aegisfinance.co.uk", // Placeholder
   address: {
     line1: "123 Finance Street",
     line2: "Business District",
@@ -12,7 +12,7 @@ export const COMPANY_INFO = {
   },
   // FCA Compliance - MUST be updated with real details
   fca: {
-    firmName: "Cascade Finance", // AR Name
+    firmName: "Aegis Finance", // AR Name
     firmReferenceNumber: "XXXXXX", // AR FRN - TO BE PROVIDED
     principalFirm: "White Rose Finance Group Ltd",
     principalFRN: "630772",
@@ -181,9 +181,9 @@ export const FINANCE_TYPES = [
 
 // SEO defaults
 export const SEO_DEFAULTS = {
-  siteName: "Cascade Finance",
+  siteName: "Aegis Finance",
   defaultTitle: "Commercial Finance Brokers | Property & Business Finance",
   defaultDescription:
     "Expert commercial finance brokers specialising in bridging loans, development finance, buy-to-let mortgages, and business finance. FCA regulated. Indicative terms in 24 hours.",
-  twitterHandle: "@cascadefinance",
+  twitterHandle: "@aegisfinance",
 } as const;

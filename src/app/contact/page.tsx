@@ -7,7 +7,7 @@ import { COMPANY_INFO } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Contact Us | Get a Quote",
   description:
-    "Contact Cascade Finance for expert commercial finance advice. Get indicative terms within 24 hours. Call, email, or complete our enquiry form.",
+    "Contact Aegis Finance for expert commercial finance advice. Get indicative terms within 24 hours. Call, email, or complete our enquiry form.",
 };
 
 export default function ContactPage() {

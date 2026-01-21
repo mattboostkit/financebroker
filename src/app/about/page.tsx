@@ -7,7 +7,7 @@ import { COMPANY_INFO } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "About Us | Commercial Finance Experts",
   description:
-    "Learn about Cascade Finance - FCA regulated commercial finance brokers with decades of combined experience. NACFB and FIBA members.",
+    "Learn about Aegis Finance - FCA regulated commercial finance brokers with decades of combined experience. NACFB and FIBA members.",
 };
 
 const values = [
