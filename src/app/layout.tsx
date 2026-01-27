@@ -5,6 +5,7 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { Toaster } from "@/components/ui/sonner";
 import { ConvexClientProvider } from "@/providers/convex-provider";
+import { ScrollToTop } from "@/components/scroll-to-top";
 import { SEO_DEFAULTS } from "@/lib/constants";
 
 const dmSans = DM_Sans({
@@ -59,6 +60,7 @@ export default function RootLayout({
     <html lang="en-GB">
       <body className={`${dmSans.variable} font-sans antialiased`}>
         <ConvexClientProvider>
+          <ScrollToTop />
           <div className="flex min-h-screen flex-col">
             <Header />
             <main className="flex-1">{children}</main>
