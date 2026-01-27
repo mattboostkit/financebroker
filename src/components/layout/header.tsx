@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { Menu, X, Phone, ChevronDown } from "lucide-react";
+import { Menu, Phone, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import {
@@ -14,7 +14,6 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
-import { cn } from "@/lib/utils";
 import { COMPANY_INFO, NAV_ITEMS } from "@/lib/constants";
 
 export function Header() {
@@ -47,11 +46,11 @@ export function Header() {
             className="flex items-center gap-2"
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           >
-            <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary text-primary-foreground font-bold text-xl">
-              CF
+            <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-[#0D3B2E] text-white">
+              <Shield className="h-5 w-5" />
             </div>
             <div className="hidden sm:block">
-              <p className="font-semibold text-primary">{COMPANY_INFO.name}</p>
+              <p className="font-semibold text-primary tracking-tight">{COMPANY_INFO.name}</p>
               <p className="text-xs text-muted-foreground">{COMPANY_INFO.tagline}</p>
             </div>
           </Link>

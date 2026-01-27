@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-primary via-primary to-[#0f2341] text-primary-foreground">
+    <section className="relative overflow-hidden bg-gradient-to-br from-primary via-primary to-[#072820] text-primary-foreground">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div
@@ -73,7 +73,7 @@ export function Hero() {
                 <p className="text-sm text-primary-foreground/70">Lending Partners</p>
               </div>
               <div className="text-center">
-                <p className="text-3xl font-bold text-accent">£500M+</p>
+                <p className="text-3xl font-bold text-accent">£50M+</p>
                 <p className="text-sm text-primary-foreground/70">Arranged</p>
               </div>
             </div>

@@ -71,6 +71,10 @@ export const NAV_ITEMS = [
     href: "/about",
   },
   {
+    title: "Case Studies",
+    href: "/case-studies",
+  },
+  {
     title: "Insights",
     href: "/insights",
   },
@@ -96,6 +100,7 @@ export const FOOTER_NAV = {
   company: [
     { title: "About Us", href: "/about" },
     { title: "Our Process", href: "/our-process" },
+    { title: "Case Studies", href: "/case-studies" },
     { title: "Insights", href: "/insights" },
     { title: "Contact", href: "/contact" },
   ],
@@ -187,3 +192,79 @@ export const SEO_DEFAULTS = {
     "Expert commercial finance brokers specialising in bridging loans, development finance, buy-to-let mortgages, and business finance. FCA regulated. Indicative terms in 24 hours.",
   twitterHandle: "@aegisfinance",
 } as const;
+
+// Company Stats
+export const STATS = {
+  established: "2024",
+  lenders: "100+",
+  arranged: "£50M+",
+  turnaround: "24hrs",
+} as const;
+
+// Case Studies
+export const CASE_STUDIES = [
+  {
+    slug: "warehouse-conversion-east-london",
+    title: "Victorian Warehouse Conversion",
+    financeType: "Development Finance",
+    amount: "£2.5M",
+    location: "East London",
+    duration: "18 months",
+    summary:
+      "Transformed a disused Victorian warehouse into 12 luxury apartments. We secured development finance with 85% LTC and staged drawdowns aligned to the build programme.",
+    challenge:
+      "The client needed funding for a complex conversion project with listed building considerations. Traditional lenders were hesitant due to the heritage constraints.",
+    solution:
+      "We approached specialist development lenders familiar with heritage projects and secured competitive terms with flexible drawdown arrangements.",
+    result:
+      "All 12 units sold off-plan before completion, generating a 25% profit on GDV for our client.",
+  },
+  {
+    slug: "auction-purchase-manchester",
+    title: "Auction Purchase Rescue",
+    financeType: "Bridging Finance",
+    amount: "£850K",
+    location: "Manchester",
+    duration: "28 days",
+    summary:
+      "Secured bridging finance in just 5 days for an investor who won an auction lot but had their original funding fall through.",
+    challenge:
+      "The client had won an auction property at £850,000 but their original lender withdrew at the last minute, leaving just 5 working days to complete.",
+    solution:
+      "We mobilised our lender network immediately and secured terms within 24 hours. The valuation was fast-tracked and legal work completed in parallel.",
+    result:
+      "Completion achieved with 2 days to spare. The client has since refurbished and refinanced onto a BTL mortgage.",
+  },
+  {
+    slug: "btl-portfolio-expansion",
+    title: "Portfolio Landlord Expansion",
+    financeType: "Buy-to-Let",
+    amount: "£1.8M",
+    location: "Birmingham",
+    duration: "6 weeks",
+    summary:
+      "Helped a portfolio landlord acquire 6 properties across Birmingham using SPV structures for tax efficiency.",
+    challenge:
+      "The client owned 15 properties personally and wanted to expand their portfolio but was hitting rate and affordability constraints with mainstream lenders.",
+    solution:
+      "We structured the new acquisitions through limited company SPVs and found specialist portfolio lenders comfortable with the client's scale.",
+    result:
+      "Six properties acquired generating £9,500 per month in rental income with improved tax efficiency.",
+  },
+  {
+    slug: "invoice-finance-manufacturing",
+    title: "Manufacturing Growth Funding",
+    financeType: "Invoice Finance",
+    amount: "£500K",
+    location: "West Midlands",
+    duration: "Ongoing",
+    summary:
+      "Provided invoice finance facility to a growing manufacturing business struggling with cash flow due to 60-day payment terms.",
+    challenge:
+      "A successful manufacturer was winning larger contracts but the extended payment terms were straining working capital and limiting growth.",
+    solution:
+      "We arranged a confidential invoice finance facility releasing 85% of invoice values within 24 hours of issue.",
+    result:
+      "The business has doubled turnover in 12 months while maintaining healthy cash reserves and taking on larger contracts.",
+  },
+] as const;

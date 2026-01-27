@@ -11,6 +11,7 @@
 import type * as calculators from "../calculators.js";
 import type * as contacts from "../contacts.js";
 import type * as leads from "../leads.js";
+import type * as newsletter from "../newsletter.js";
 
 import type {
   ApiFromModules,
@@ -22,6 +23,7 @@ declare const fullApi: ApiFromModules<{
   calculators: typeof calculators;
   contacts: typeof contacts;
   leads: typeof leads;
+  newsletter: typeof newsletter;
 }>;
 
 /**

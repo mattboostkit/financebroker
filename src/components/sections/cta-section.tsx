@@ -8,7 +8,7 @@ import { COMPANY_INFO } from "@/lib/constants";
 
 export function CTASection() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-secondary via-secondary to-teal-700 text-secondary-foreground py-16 md:py-24">
+    <section className="relative overflow-hidden bg-gradient-to-br from-secondary via-secondary to-[#0D3B2E] text-secondary-foreground py-16 md:py-24">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div
@@ -55,7 +55,7 @@ export function CTASection() {
             <Button
               asChild
               size="lg"
-              variant="outline-teal"
+              variant="outline-green"
             >
               <a href={`tel:${COMPANY_INFO.phone.replace(/\s/g, "")}`}>
                 <Phone className="mr-2 h-5 w-5" />

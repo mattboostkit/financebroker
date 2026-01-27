@@ -7,19 +7,19 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-primary text-primary-foreground">
+    <footer className="bg-[#1A1A1A] text-white">
       {/* Main Footer */}
       <div className="container mx-auto px-4 py-12 md:py-16">
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center gap-2">
-              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-secondary text-secondary-foreground font-bold text-xl">
-                CF
+              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-[#0D3B2E] text-white font-bold text-xl">
+                AF
               </div>
               <div>
                 <p className="font-semibold">{COMPANY_INFO.name}</p>
-                <p className="text-sm text-primary-foreground/70">
+                <p className="text-sm text-white/70">
                   {COMPANY_INFO.tagline}
                 </p>
               </div>
@@ -27,14 +27,14 @@ export function Footer() {
             <div className="space-y-3 text-sm">
               <a
                 href={`tel:${COMPANY_INFO.phone.replace(/\s/g, "")}`}
-                className="flex items-center gap-2 hover:text-accent transition-colors"
+                className="flex items-center gap-2 hover:text-[#C4A35A] transition-colors"
               >
                 <Phone className="h-4 w-4" />
                 {COMPANY_INFO.phone}
               </a>
               <a
                 href={`mailto:${COMPANY_INFO.email}`}
-                className="flex items-center gap-2 hover:text-accent transition-colors"
+                className="flex items-center gap-2 hover:text-[#C4A35A] transition-colors"
               >
                 <Mail className="h-4 w-4" />
                 {COMPANY_INFO.email}
@@ -60,7 +60,7 @@ export function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-primary-foreground/70 hover:text-accent transition-colors"
+                    className="text-white/70 hover:text-[#C4A35A] transition-colors"
                   >
                     {link.title}
                   </Link>
@@ -77,7 +77,7 @@ export function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-primary-foreground/70 hover:text-accent transition-colors"
+                    className="text-white/70 hover:text-[#C4A35A] transition-colors"
                   >
                     {link.title}
                   </Link>
@@ -94,7 +94,7 @@ export function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-primary-foreground/70 hover:text-accent transition-colors"
+                    className="text-white/70 hover:text-[#C4A35A] transition-colors"
                   >
                     {link.title}
                   </Link>
@@ -103,14 +103,14 @@ export function Footer() {
             </ul>
             {/* Memberships */}
             <div className="mt-6">
-              <p className="text-sm text-primary-foreground/70">
+              <p className="text-sm text-white/70">
                 Member of:
               </p>
               <div className="flex gap-4 mt-2">
                 {COMPANY_INFO.memberships.map((membership) => (
                   <span
                     key={membership}
-                    className="text-xs font-medium bg-primary-foreground/10 px-2 py-1 rounded"
+                    className="text-xs font-medium bg-white/10 px-2 py-1 rounded"
                   >
                     {membership}
                   </span>
@@ -121,11 +121,11 @@ export function Footer() {
         </div>
       </div>
 
-      <Separator className="bg-primary-foreground/20" />
+      <Separator className="bg-white/20" />
 
       {/* Compliance Footer */}
       <div className="container mx-auto px-4 py-6">
-        <div className="space-y-4 text-xs text-primary-foreground/60">
+        <div className="space-y-4 text-xs text-white/60">
           <p>
             {COMPANY_INFO.fca.firmName} is an Appointed Representative of{" "}
             {COMPANY_INFO.fca.principalFirm} who are authorised and regulated by
@@ -143,16 +143,16 @@ export function Footer() {
             Registered with the Information Commissioner&apos;s Office (ICO) for
             data protection. Registration number: {COMPANY_INFO.ico.registrationNumber}.
           </p>
-          <Separator className="bg-primary-foreground/20 my-4" />
+          <Separator className="bg-white/20 my-4" />
           <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
             <p>
               &copy; {currentYear} {COMPANY_INFO.name}. All rights reserved.
             </p>
             <div className="flex gap-4">
-              <Link href="/privacy-policy" className="hover:text-accent transition-colors">
+              <Link href="/privacy-policy" className="hover:text-[#C4A35A] transition-colors">
                 Privacy Policy
               </Link>
-              <Link href="/terms" className="hover:text-accent transition-colors">
+              <Link href="/terms" className="hover:text-[#C4A35A] transition-colors">
                 Terms & Conditions
               </Link>
             </div>

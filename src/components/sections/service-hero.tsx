@@ -20,7 +20,7 @@ export function ServiceHero({
   features,
 }: ServiceHeroProps) {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-primary via-primary to-[#0f2341] text-primary-foreground py-16 md:py-24">
+    <section className="relative overflow-hidden bg-gradient-to-br from-primary via-primary to-[#072820] text-primary-foreground py-16 md:py-24">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div
