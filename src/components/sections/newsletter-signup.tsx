@@ -5,15 +5,11 @@ import { motion } from "framer-motion";
 import { Mail, ArrowRight, CheckCircle, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { useMutation } from "convex/react";
-import { api } from "../../../convex/_generated/api";
 
 export function NewsletterSignup() {
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [message, setMessage] = useState("");
-
-  const subscribe = useMutation(api.newsletter.subscribe);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -22,15 +18,26 @@ export function NewsletterSignup() {
     setStatus("loading");
 
     try {
-      const result = await subscribe({
-        email,
-        source: "homepage-newsletter",
+      const response = await fetch("/api/newsletter", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email,
+          source: "homepage-newsletter",
+        }),
       });
+
+      const result = await response.json();
 
       if (result.success) {
         setStatus("success");
-        setMessage("Thank you for subscribing!");
+        setMessage(result.message || "Thank you for subscribing!");
         setEmail("");
+      } else {
+        setStatus("error");
+        setMessage(result.message || "Something went wrong. Please try again.");
       }
     } catch {
       setStatus("error");
