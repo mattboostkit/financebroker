@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   title: "Contact Us | Get a Quote",
   description:
     "Contact Aegis Finance for expert commercial finance advice. Get indicative terms within 24 hours. Call, email, or complete our enquiry form.",
+  alternates: {
+    canonical: '/contact',
+  },
 };
 
 const timeSlots = [

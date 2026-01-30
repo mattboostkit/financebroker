@@ -10,6 +10,9 @@ export const metadata: Metadata = {
   title: "Business Finance | Asset Finance & Invoice Finance",
   description:
     "Business finance solutions including asset finance, equipment leasing, invoice factoring, and working capital. Fuel your business growth with flexible funding.",
+  alternates: {
+    canonical: '/business-finance',
+  },
 };
 
 const services = [

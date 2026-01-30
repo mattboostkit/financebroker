@@ -4,6 +4,9 @@ import { COMPANY_INFO } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Terms & Conditions",
   description: `Terms and conditions for using ${COMPANY_INFO.name}'s website and services.`,
+  alternates: {
+    canonical: '/terms',
+  },
 };
 
 export default function TermsPage() {

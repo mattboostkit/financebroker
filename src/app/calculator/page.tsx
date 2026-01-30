@@ -165,6 +165,7 @@ function BridgingCalculator() {
 }
 
 function DevelopmentCalculator() {
+  const shouldReduceMotion = useReducedMotion();
   const [purchasePrice, setPurchasePrice] = useState<number>(500000);
   const [buildCosts, setBuildCosts] = useState<number>(300000);
   const [gdv, setGdv] = useState<number>(1200000);

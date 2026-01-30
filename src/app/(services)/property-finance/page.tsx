@@ -10,6 +10,9 @@ export const metadata: Metadata = {
   title: "Property Finance | Bridging, Development & BTL",
   description:
     "Expert property finance solutions including bridging loans, development finance, and buy-to-let mortgages. Fast approvals, competitive rates, whole of market access.",
+  alternates: {
+    canonical: '/property-finance',
+  },
 };
 
 const services = [

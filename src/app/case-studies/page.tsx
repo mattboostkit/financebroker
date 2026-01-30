@@ -10,6 +10,9 @@ export const metadata: Metadata = {
   title: "Case Studies | Successful Finance Projects",
   description:
     "See how Aegis Finance has helped clients secure funding for property developments, bridging loans, buy-to-let portfolios, and business growth.",
+  alternates: {
+    canonical: '/case-studies',
+  },
 };
 
 const financeTypes = [

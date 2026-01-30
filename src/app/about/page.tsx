@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   title: "About Us | Commercial Finance Experts",
   description:
     "Learn about Aegis Finance - FCA regulated commercial finance brokers with decades of combined experience. NACFB and FIBA members.",
+  alternates: {
+    canonical: '/about',
+  },
 };
 
 const values = [

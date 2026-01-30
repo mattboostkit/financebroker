@@ -1,24 +1,26 @@
 // Company Information
+// ⚠️ CRITICAL: UPDATE BEFORE LAUNCH
+// These are placeholder values that MUST be replaced with real company details
 export const COMPANY_INFO = {
-  name: "Aegis Finance", // Placeholder - to be updated
+  name: "Aegis Finance",
   tagline: "Commercial Finance Specialists",
-  phone: "01234 567890", // Placeholder
-  email: "enquiries@aegisfinance.co.uk", // Placeholder
+  phone: "01234 567890", // ⚠️ UPDATE: Replace with real phone number
+  email: "enquiries@aegisfinance.co.uk", // ⚠️ UPDATE: Confirm or replace email
   address: {
-    line1: "123 Finance Street",
-    line2: "Business District",
-    city: "London",
-    postcode: "EC1A 1AA",
+    line1: "123 Finance Street", // ⚠️ UPDATE: Real address required
+    line2: "Business District",  // ⚠️ UPDATE: Real address required
+    city: "London",              // ⚠️ UPDATE: Real city
+    postcode: "EC1A 1AA",        // ⚠️ UPDATE: Real postcode
   },
   // FCA Compliance - MUST be updated with real details
   fca: {
-    firmName: "Aegis Finance", // AR Name
-    firmReferenceNumber: "XXXXXX", // AR FRN - TO BE PROVIDED
+    firmName: "Aegis Finance",
+    firmReferenceNumber: "XXXXXX", // ⚠️ CRITICAL: AR FRN must be provided
     principalFirm: "White Rose Finance Group Ltd",
-    principalFRN: "630772",
+    principalFRN: "630772", // ✅ Confirmed correct
   },
   ico: {
-    registrationNumber: "XXXXXXXX", // ICO Number - TO BE PROVIDED
+    registrationNumber: "XXXXXXXX", // ⚠️ CRITICAL: ICO registration number required
   },
   memberships: ["NACFB", "FIBA"],
 } as const;

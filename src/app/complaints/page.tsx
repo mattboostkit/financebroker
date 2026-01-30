@@ -4,6 +4,9 @@ import { COMPANY_INFO } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Complaints Procedure",
   description: `How to make a complaint to ${COMPANY_INFO.name}. Our complaints handling procedure and your rights.`,
+  alternates: {
+    canonical: '/complaints',
+  },
 };
 
 export default function ComplaintsPage() {

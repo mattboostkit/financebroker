@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   title: "Insights | Finance News & Guides",
   description:
     "Expert insights on commercial finance, property investment, and business funding. Guides, news, and market updates from Aegis Finance.",
+  alternates: {
+    canonical: '/insights',
+  },
 };
 
 // Placeholder posts - will be replaced with Sanity data
