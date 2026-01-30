@@ -103,7 +103,7 @@ export function LeadCaptureForm({
               <FormItem>
                 <FormLabel>Full Name *</FormLabel>
                 <FormControl>
-                  <Input placeholder="John Smith" {...field} />
+                  <Input placeholder="John Smith" autoComplete="name" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -116,7 +116,7 @@ export function LeadCaptureForm({
               <FormItem>
                 <FormLabel>Phone Number *</FormLabel>
                 <FormControl>
-                  <Input placeholder="07123 456789" {...field} />
+                  <Input placeholder="07123 456789" autoComplete="tel" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -131,7 +131,7 @@ export function LeadCaptureForm({
             <FormItem>
               <FormLabel>Email Address *</FormLabel>
               <FormControl>
-                <Input type="email" placeholder="john@example.com" {...field} />
+                <Input type="email" placeholder="john@example.com" autoComplete="email" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -145,7 +145,7 @@ export function LeadCaptureForm({
             <FormItem>
               <FormLabel>Company Name</FormLabel>
               <FormControl>
-                <Input placeholder="Your company (optional)" {...field} />
+                <Input placeholder="Your company (optional)" autoComplete="organization" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>

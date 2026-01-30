@@ -44,7 +44,6 @@ export function Header() {
           <Link
             href="/"
             className="flex items-center gap-2"
-            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           >
             <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-[#0D3B2E] text-white">
               <Shield className="h-5 w-5" />
@@ -109,6 +108,7 @@ export function Header() {
             <a
               href={`tel:${COMPANY_INFO.phone.replace(/\s/g, "")}`}
               className="flex h-10 w-10 items-center justify-center rounded-full bg-secondary text-secondary-foreground"
+              aria-label={`Call us on ${COMPANY_INFO.phone}`}
             >
               <Phone className="h-5 w-5" />
             </a>

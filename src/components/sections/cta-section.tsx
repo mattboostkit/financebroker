@@ -1,12 +1,14 @@
 "use client";
 
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import { Phone, ArrowRight, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { COMPANY_INFO } from "@/lib/constants";
 
 export function CTASection() {
+  const shouldReduceMotion = useReducedMotion();
+
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-secondary via-secondary to-[#0D3B2E] text-secondary-foreground py-16 md:py-24">
       {/* Background Pattern */}
@@ -21,9 +23,10 @@ export function CTASection() {
 
       <div className="container relative mx-auto px-4">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={shouldReduceMotion ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
+          transition={shouldReduceMotion ? { duration: 0 } : undefined}
           className="max-w-3xl mx-auto text-center"
         >
           <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm backdrop-blur-sm mb-6">

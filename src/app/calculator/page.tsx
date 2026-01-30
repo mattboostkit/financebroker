@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import { Calculator, Building, TrendingUp, PoundSterling } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -20,6 +20,7 @@ function formatCurrency(value: number): string {
 }
 
 function BridgingCalculator() {
+  const shouldReduceMotion = useReducedMotion();
   const [propertyValue, setPropertyValue] = useState<number>(500000);
   const [loanAmount, setLoanAmount] = useState<number>(375000);
   const [termMonths, setTermMonths] = useState<number>(12);
@@ -62,6 +63,7 @@ function BridgingCalculator() {
                 className="pl-9"
                 value={propertyValue}
                 onChange={(e) => setPropertyValue(Number(e.target.value))}
+                autoComplete="off"
               />
             </div>
           </div>
@@ -75,6 +77,7 @@ function BridgingCalculator() {
                 className="pl-9"
                 value={loanAmount}
                 onChange={(e) => setLoanAmount(Number(e.target.value))}
+                autoComplete="off"
               />
             </div>
           </div>
@@ -87,6 +90,7 @@ function BridgingCalculator() {
               max={24}
               value={termMonths}
               onChange={(e) => setTermMonths(Number(e.target.value))}
+              autoComplete="off"
             />
           </div>
           <div className="space-y-2">
@@ -99,6 +103,7 @@ function BridgingCalculator() {
               max={2}
               value={interestRate}
               onChange={(e) => setInterestRate(Number(e.target.value))}
+              autoComplete="off"
             />
           </div>
         </div>
@@ -109,8 +114,9 @@ function BridgingCalculator() {
 
         {resultsUnlocked && (
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={shouldReduceMotion ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
+            transition={shouldReduceMotion ? { duration: 0 } : undefined}
             className="bg-muted rounded-lg p-6 space-y-4"
           >
             <h4 className="font-semibold text-lg">Indicative Results</h4>
@@ -201,6 +207,7 @@ function DevelopmentCalculator() {
                 className="pl-9"
                 value={purchasePrice}
                 onChange={(e) => setPurchasePrice(Number(e.target.value))}
+                autoComplete="off"
               />
             </div>
           </div>
@@ -214,6 +221,7 @@ function DevelopmentCalculator() {
                 className="pl-9"
                 value={buildCosts}
                 onChange={(e) => setBuildCosts(Number(e.target.value))}
+                autoComplete="off"
               />
             </div>
           </div>
@@ -227,6 +235,7 @@ function DevelopmentCalculator() {
                 className="pl-9"
                 value={gdv}
                 onChange={(e) => setGdv(Number(e.target.value))}
+                autoComplete="off"
               />
             </div>
           </div>
@@ -238,8 +247,9 @@ function DevelopmentCalculator() {
 
         {resultsUnlocked && (
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={shouldReduceMotion ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
+            transition={shouldReduceMotion ? { duration: 0 } : undefined}
             className="bg-muted rounded-lg p-6 space-y-4"
           >
             <h4 className="font-semibold text-lg">Indicative Results</h4>
@@ -322,6 +332,7 @@ function LTVCalculator() {
                 className="pl-9"
                 value={propertyValue}
                 onChange={(e) => setPropertyValue(Number(e.target.value))}
+                autoComplete="off"
               />
             </div>
           </div>
@@ -335,6 +346,7 @@ function LTVCalculator() {
                 className="pl-9"
                 value={loanRequired}
                 onChange={(e) => setLoanRequired(Number(e.target.value))}
+                autoComplete="off"
               />
             </div>
           </div>

@@ -1,11 +1,13 @@
 "use client";
 
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import { ArrowRight, Clock, Shield, Building2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export function Hero() {
+  const shouldReduceMotion = useReducedMotion();
+
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-primary via-primary to-[#072820] text-primary-foreground">
       {/* Background Pattern */}
@@ -22,9 +24,9 @@ export function Hero() {
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
           {/* Content */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={shouldReduceMotion ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={shouldReduceMotion ? { duration: 0 } : { duration: 0.6 }}
             className="space-y-8"
           >
             <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm backdrop-blur-sm">
@@ -65,7 +67,7 @@ export function Hero() {
             {/* Trust Indicators */}
             <div className="grid grid-cols-3 gap-6 pt-8 border-t border-primary-foreground/20">
               <div className="text-center">
-                <p className="text-3xl font-bold text-accent">24hrs</p>
+                <p className="text-3xl font-bold text-accent">24&nbsp;hrs</p>
                 <p className="text-sm text-primary-foreground/70">Indicative Terms</p>
               </div>
               <div className="text-center">
@@ -81,9 +83,9 @@ export function Hero() {
 
           {/* Feature Cards */}
           <motion.div
-            initial={{ opacity: 0, x: 20 }}
+            initial={shouldReduceMotion ? { opacity: 1, x: 0 } : { opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            transition={shouldReduceMotion ? { duration: 0 } : { duration: 0.6, delay: 0.2 }}
             className="grid gap-4"
           >
             <div className="rounded-xl bg-white/10 p-6 backdrop-blur-sm hover:bg-white/15 transition-colors">

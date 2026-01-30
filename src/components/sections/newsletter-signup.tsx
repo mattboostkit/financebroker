@@ -1,12 +1,13 @@
 "use client";
 
 import { useState } from "react";
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import { Mail, ArrowRight, CheckCircle, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 
 export function NewsletterSignup() {
+  const shouldReduceMotion = useReducedMotion();
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [message, setMessage] = useState("");
@@ -49,9 +50,10 @@ export function NewsletterSignup() {
     <section className="py-12 md:py-16 bg-[#F5F5F5]">
       <div className="container mx-auto px-4">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={shouldReduceMotion ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
+          transition={shouldReduceMotion ? { duration: 0 } : undefined}
           className="max-w-2xl mx-auto text-center"
         >
           <div className="inline-flex items-center justify-center h-12 w-12 rounded-full bg-primary/10 mb-4">
@@ -67,8 +69,9 @@ export function NewsletterSignup() {
 
           {status === "success" ? (
             <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
+              initial={shouldReduceMotion ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
+              transition={shouldReduceMotion ? { duration: 0 } : undefined}
               className="flex items-center justify-center gap-2 text-primary py-4"
             >
               <CheckCircle className="h-5 w-5" />
@@ -78,10 +81,12 @@ export function NewsletterSignup() {
             <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
               <Input
                 type="email"
+                name="email"
                 placeholder="Enter your email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
+                autoComplete="email"
                 className="flex-1"
                 disabled={status === "loading"}
               />

@@ -98,7 +98,7 @@ export function CalculatorLeadGate({
                 <FormItem>
                   <FormLabel>Full Name *</FormLabel>
                   <FormControl>
-                    <Input placeholder="John Smith" {...field} />
+                    <Input placeholder="John Smith" autoComplete="name" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -112,7 +112,7 @@ export function CalculatorLeadGate({
                 <FormItem>
                   <FormLabel>Email Address *</FormLabel>
                   <FormControl>
-                    <Input type="email" placeholder="john@example.com" {...field} />
+                    <Input type="email" placeholder="john@example.com" autoComplete="email" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -126,7 +126,7 @@ export function CalculatorLeadGate({
                 <FormItem>
                   <FormLabel>Phone Number *</FormLabel>
                   <FormControl>
-                    <Input placeholder="07123 456789" {...field} />
+                    <Input placeholder="07123 456789" autoComplete="tel" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
