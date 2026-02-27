@@ -4,13 +4,13 @@
 export const COMPANY_INFO = {
   name: "Aegis Finance",
   tagline: "Commercial Finance Specialists",
-  phone: "01234 567890", // ⚠️ UPDATE: Replace with real phone number
-  email: "enquiries@aegisfinance.co.uk", // ⚠️ UPDATE: Confirm or replace email
+  phone: "0204 634 7364",
+  email: "enquiries@aegisfinance.co.uk",
   address: {
-    line1: "123 Finance Street", // ⚠️ UPDATE: Real address required
-    line2: "Business District",  // ⚠️ UPDATE: Real address required
-    city: "London",              // ⚠️ UPDATE: Real city
-    postcode: "EC1A 1AA",        // ⚠️ UPDATE: Real postcode
+    line1: "6th Floor",
+    line2: "Lombard Street",
+    city: "London",
+    postcode: "EC3V 9BQ",
   },
   // FCA Compliance - MUST be updated with real details
   fca: {
@@ -72,10 +72,10 @@ export const NAV_ITEMS = [
     title: "About",
     href: "/about",
   },
-  {
-    title: "Case Studies",
-    href: "/case-studies",
-  },
+  // {
+  //   title: "Case Studies",
+  //   href: "/case-studies",
+  // },
   {
     title: "Insights",
     href: "/insights",
@@ -102,7 +102,7 @@ export const FOOTER_NAV = {
   company: [
     { title: "About Us", href: "/about" },
     { title: "Our Process", href: "/our-process" },
-    { title: "Case Studies", href: "/case-studies" },
+    // { title: "Case Studies", href: "/case-studies" },
     { title: "Insights", href: "/insights" },
     { title: "Contact", href: "/contact" },
   ],
